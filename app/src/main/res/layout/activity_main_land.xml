@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="16dp"
+    android:paddingTop="16dp"
+    android:paddingRight="16dp"
+    android:paddingBottom="16dp"
+    tools:context=".MainActivity">
+
+    <!-- Color Preview FrameLayout -->
+    <FrameLayout
+        android:id="@+id/colorPreview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/colorPreviewBackground">
+        <!-- You can customize the colorPreview layout -->
+    </FrameLayout>
+
+    <!-- Red Slider -->
+    <SeekBar
+        android:id="@+id/redSlider"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp" />
+
+    <!-- Green Slider -->
+    <SeekBar
+        android:id="@+id/greenSlider"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Blue Slider -->
+    <SeekBar
+        android:id="@+id/blueSlider"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Red Switch -->
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/redSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/switch_red"
+        app:theme="@style/Widget.AppCompat.CompoundButton.Switch"/>
+
+    <!-- Green Switch with added padding -->
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/greenSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/switch_green"
+        app:theme="@style/Widget.AppCompat.CompoundButton.Switch"/>
+
+    <!-- Blue Switch with added padding -->
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/blueSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/switch_blue"
+        app:theme="@style/Widget.AppCompat.CompoundButton.Switch"/>
+
+    <!-- Reset Button -->
+    <Button
+        android:id="@+id/resetButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reset"
+        android:layout_below="@id/colorPreview"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"/>
+
+</RelativeLayout>
