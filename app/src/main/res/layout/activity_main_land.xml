@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:paddingLeft="16dp"
     android:paddingTop="16dp"
     android:paddingRight="16dp"
@@ -20,50 +22,67 @@
         <!-- You can customize the colorPreview layout -->
     </FrameLayout>
 
-    <!-- Red Slider -->
-    <SeekBar
-        android:id="@+id/redSlider"
+    <!-- Sliders -->
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp" />
+        android:orientation="horizontal">
 
-    <!-- Green Slider -->
-    <SeekBar
-        android:id="@+id/greenSlider"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"/>
+        <!-- Red Slider -->
+        <SeekBar
+            android:id="@+id/redSlider"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop="16dp"/>
 
-    <!-- Blue Slider -->
-    <SeekBar
-        android:id="@+id/blueSlider"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"/>
+        <!-- Green Slider -->
+        <SeekBar
+            android:id="@+id/greenSlider"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop="16dp"/>
 
-    <!-- Red Switch -->
-    <androidx.appcompat.widget.SwitchCompat
-        android:id="@+id/redSwitch"
+        <!-- Blue Slider -->
+        <SeekBar
+            android:id="@+id/blueSlider"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop="16dp"/>
+    </LinearLayout>
+
+    <!-- Switches -->
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/switch_red"
-        app:theme="@style/Widget.AppCompat.CompoundButton.Switch"/>
+        android:orientation="vertical">
 
-    <!-- Green Switch with added padding -->
-    <androidx.appcompat.widget.SwitchCompat
-        android:id="@+id/greenSwitch"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/switch_green"
-        app:theme="@style/Widget.AppCompat.CompoundButton.Switch"/>
+        <!-- Red Switch -->
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/redSwitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Red"
+            app:theme="@style/Widget.AppCompat.CompoundButton.Switch"/>
 
-    <!-- Blue Switch with added padding -->
-    <androidx.appcompat.widget.SwitchCompat
-        android:id="@+id/blueSwitch"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/switch_blue"
-        app:theme="@style/Widget.AppCompat.CompoundButton.Switch"/>
+        <!-- Green Switch -->
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/greenSwitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Green"
+            app:theme="@style/Widget.AppCompat.CompoundButton.Switch"/>
+
+        <!-- Blue Switch -->
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/blueSwitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Blue"
+            app:theme="@style/Widget.AppCompat.CompoundButton.Switch"/>
+    </LinearLayout>
 
     <!-- Reset Button -->
     <Button
@@ -71,9 +90,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Reset"
-        android:layout_below="@id/colorPreview"
-        android:layout_alignParentEnd="true"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"/>
-
-</RelativeLayout>
+        android:layout_gravity="end"/>
+</LinearLayout>
