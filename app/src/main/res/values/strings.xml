@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">411 persistence</string>
+    <string name="hint_red_value">Enter Red Value</string>
+    <string name="hint_green_value">Enter Green Value</string>
+    <string name="hint_blue_value">Enter Blue Value</string>
+    <string name="button_reset">Reset</string>
+    <string name="red_intensity_label">Red Intensity Level</string>
+    <string name="green_intensity_label">Green Intensity Level</string>
+    <string name="blue_intensity_label">Blue Intensity Level</string>
 </resources>
