@@ -1,95 +1,160 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:paddingLeft="16dp"
-    android:paddingTop="16dp"
-    android:paddingRight="16dp"
-    android:paddingBottom="16dp"
-    tools:context=".MainActivity">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <!-- Color Preview FrameLayout -->
-    <FrameLayout
-        android:id="@+id/colorPreview"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:background="@color/colorPreviewBackground">
-        <!-- You can customize the colorPreview layout -->
-    </FrameLayout>
-
-    <!-- Sliders -->
+    <!-- Enclosing LinearLayout for the entire content -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="vertical"
+        android:padding="16dp">
 
-        <!-- Red Slider -->
-        <SeekBar
-            android:id="@+id/redSlider"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_marginTop="16dp"/>
+        <!-- Color Preview FrameLayout -->
+        <FrameLayout
+            android:id="@+id/colorPreview"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@color/colorPreviewBackground">
+        </FrameLayout>
 
-        <!-- Green Slider -->
-        <SeekBar
-            android:id="@+id/greenSlider"
-            android:layout_width="0dp"
+        <!-- Sliders -->
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_marginTop="16dp"/>
+            android:orientation="horizontal">
 
-        <!-- Blue Slider -->
-        <SeekBar
-            android:id="@+id/blueSlider"
-            android:layout_width="0dp"
+            <!-- Red Slider -->
+            <SeekBar
+                android:id="@+id/redSlider"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginTop="16dp"/>
+
+            <!-- Green Slider -->
+            <SeekBar
+                android:id="@+id/greenSlider"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginTop="16dp"/>
+
+            <!-- Blue Slider -->
+            <SeekBar
+                android:id="@+id/blueSlider"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginTop="16dp"/>
+        </LinearLayout>
+
+        <!-- Switches -->
+        <LinearLayout
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_marginTop="16dp"/>
+            android:orientation="vertical">
+
+            <!-- Red Switch -->
+            <LinearLayout
+                android:id="@+id/redSwitchContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:orientation="horizontal"
+                android:padding="8dp">
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/redSwitch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_red"
+                    app:theme="@style/Widget.AppCompat.CompoundButton.Switch"
+                    android:minHeight="48dp"
+                    android:minWidth="48dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_red"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp"
+                    android:layout_gravity="center_vertical"/>
+            </LinearLayout>
+
+            <!-- Green Switch -->
+            <LinearLayout
+                android:id="@+id/greenSwitchContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:orientation="horizontal"
+                android:padding="8dp">
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/greenSwitch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_green"
+                    app:theme="@style/Widget.AppCompat.CompoundButton.Switch"
+                    android:minHeight="48dp"
+                    android:minWidth="48dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_green"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp"
+                    android:layout_gravity="center_vertical"/>
+            </LinearLayout>
+
+            <!-- Blue Switch -->
+            <LinearLayout
+                android:id="@+id/blueSwitchContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:orientation="horizontal"
+                android:padding="8dp">
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/blueSwitch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_blue"
+                    app:theme="@style/Widget.AppCompat.CompoundButton.Switch"
+                    android:minHeight="48dp"
+                    android:minWidth="48dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_blue"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp"
+                    android:layout_gravity="center_vertical"/>
+            </LinearLayout>
+
+            <!-- Reset Button -->
+            <Button
+                android:id="@+id/resetButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/reset_button_text"
+                android:layout_marginTop="16dp"
+                android:layout_gravity="end"/>
+
+            <!-- Additional content to extend the height -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Extra_Content" />
+
+        </LinearLayout>
     </LinearLayout>
-
-    <!-- Switches -->
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-
-        <!-- Red Switch -->
-        <androidx.appcompat.widget.SwitchCompat
-            android:id="@+id/redSwitch"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Red"
-            app:theme="@style/Widget.AppCompat.CompoundButton.Switch"/>
-
-        <!-- Green Switch -->
-        <androidx.appcompat.widget.SwitchCompat
-            android:id="@+id/greenSwitch"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Green"
-            app:theme="@style/Widget.AppCompat.CompoundButton.Switch"/>
-
-        <!-- Blue Switch -->
-        <androidx.appcompat.widget.SwitchCompat
-            android:id="@+id/blueSwitch"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Blue"
-            app:theme="@style/Widget.AppCompat.CompoundButton.Switch"/>
-    </LinearLayout>
-
-    <!-- Reset Button -->
-    <Button
-        android:id="@+id/resetButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Reset"
-        android:layout_marginTop="16dp"
-        android:layout_gravity="end"/>
-</LinearLayout>
+</ScrollView>

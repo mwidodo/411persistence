@@ -1,129 +1,134 @@
-<LinearLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="16dp"
-    tools:context=".MainActivity">
+    android:layout_height="match_parent">
 
-    <!-- Color Preview FrameLayout -->
-    <FrameLayout
-        android:id="@+id/colorPreview"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:background="@color/colorPreviewBackground">
-        <!-- You can customize the colorPreview layout -->
-    </FrameLayout>
-
-    <!-- EditText for Red Value -->
-    <EditText
-        android:id="@+id/redEditText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:hint="@string/hint_red_value"
-        android:inputType="numberDecimal"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="16dp"
-        android:paddingStart="16dp"
-        android:paddingEnd="16dp"
-        android:paddingTop="12dp"
-        android:paddingBottom="12dp"
-        android:autofillHints="postal_code" />
-
-    <!-- EditText for Green Value -->
-    <SeekBar
-        android:id="@+id/redSlider"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp" />
-
-    <EditText
-        android:id="@+id/greenEditText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:hint="@string/hint_green_value"
-        android:inputType="numberDecimal"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="16dp"
-        android:paddingStart="16dp"
-        android:paddingEnd="16dp"
-        android:paddingTop="12dp"
-        android:paddingBottom="12dp"
-        android:autofillHints="postal_code" />
-
-    <!-- EditText for Blue Value -->
-    <SeekBar
-        android:id="@+id/greenSlider"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp" />
-
-    <EditText
-        android:id="@+id/blueEditText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:hint="@string/hint_blue_value"
-        android:inputType="numberDecimal"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="16dp"
-        android:paddingStart="16dp"
-        android:paddingEnd="16dp"
-        android:paddingTop="12dp"
-        android:paddingBottom="12dp"
-        android:autofillHints="postal_code" />
-
-    <!-- Red Slider -->
-
-    <!-- Green Slider -->
-
-    <!-- Blue Slider -->
-
-    <SeekBar
-        android:id="@+id/blueSlider"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp" />
-
-    <androidx.appcompat.widget.SwitchCompat
-        android:id="@+id/redSwitch"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/switch_red"
+        android:orientation="vertical"
         android:padding="16dp"
-        app:thumbTextPadding="16dp"
-        app:trackTint="@color/your_track_tint_color"
-        app:thumbTint="@color/red_thumb_color"
-        app:showText="true" />
+        tools:context=".MainActivity">
 
-    <androidx.appcompat.widget.SwitchCompat
-        android:id="@+id/greenSwitch"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/switch_green"
-        android:padding="16dp"
-        app:thumbTextPadding="16dp"
-        app:trackTint="@color/your_track_tint_color"
-        app:thumbTint="@color/green_thumb_color"
-        app:showText="true" />
+        <!-- Color Preview FrameLayout -->
+        <FrameLayout
+            android:id="@+id/colorPreview"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_weight="1"
+            android:background="@color/colorPreviewBackground">
+            <!-- You can customize the colorPreview layout -->
+        </FrameLayout>
 
-    <androidx.appcompat.widget.SwitchCompat
-        android:id="@+id/blueSwitch"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/switch_blue"
-        android:padding="16dp"
-        app:thumbTextPadding="16dp"
-        app:trackTint="@color/your_track_tint_color"
-        app:thumbTint="@color/blue_thumb_color"
-        app:showText="true" />
+        <!-- EditText for Red Value -->
+        <EditText
+            android:id="@+id/redEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_red_value"
+            android:inputType="numberDecimal"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp"
+            android:autofillHints="postal_code" />
 
-    <!-- Reset Button -->
-    <Button
-        android:id="@+id/resetButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/button_reset" />
-</LinearLayout>
+        <!-- Red Slider -->
+        <SeekBar
+            android:id="@+id/redSlider"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp" />
+
+        <!-- EditText for Green Value -->
+        <EditText
+            android:id="@+id/greenEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_green_value"
+            android:inputType="numberDecimal"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp"
+            android:autofillHints="postal_code" />
+
+        <!-- Green Slider -->
+        <SeekBar
+            android:id="@+id/greenSlider"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp" />
+
+        <!-- EditText for Blue Value -->
+        <EditText
+            android:id="@+id/blueEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_blue_value"
+            android:inputType="numberDecimal"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp"
+            android:autofillHints="postal_code" />
+
+        <!-- Blue Slider -->
+        <SeekBar
+            android:id="@+id/blueSlider"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp" />
+
+        <!-- Red Switch -->
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/redSwitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/switch_red"
+            android:padding="16dp"
+            app:thumbTextPadding="16dp"
+            app:trackTint="@color/your_track_tint_color"
+            app:thumbTint="@color/red_thumb_color"
+            app:showText="true" />
+
+        <!-- Green Switch -->
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/greenSwitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/switch_green"
+            android:padding="16dp"
+            app:thumbTextPadding="16dp"
+            app:trackTint="@color/your_track_tint_color"
+            app:thumbTint="@color/green_thumb_color"
+            app:showText="true" />
+
+        <!-- Blue Switch -->
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/blueSwitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/switch_blue"
+            android:padding="16dp"
+            app:thumbTextPadding="16dp"
+            app:trackTint="@color/your_track_tint_color"
+            app:thumbTint="@color/blue_thumb_color"
+            app:showText="true" />
+
+        <!-- Reset Button -->
+        <Button
+            android:id="@+id/resetButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/button_reset" />
+    </LinearLayout>
+</ScrollView>
